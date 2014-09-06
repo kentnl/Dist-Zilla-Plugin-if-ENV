@@ -15,6 +15,10 @@ dist.ini.meta
 lib/Dist/Zilla/Plugin/if/ENV.pm
 lib/Dist/Zilla/Plugin/if/not/ENV.pm
 maint/perlcritic.rc.gen.pl
+misc/Changes.deps
+misc/Changes.deps.all
+misc/Changes.deps.dev
+misc/Changes.deps.opt
 misc/perlcritic.deps
 perlcritic.rc
 t/00-compile/lib_Dist_Zilla_Plugin_if_ENV_pm.t

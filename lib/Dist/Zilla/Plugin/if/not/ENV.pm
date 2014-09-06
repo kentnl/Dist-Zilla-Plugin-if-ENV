@@ -5,7 +5,7 @@ use utf8;
 
 package Dist::Zilla::Plugin::if::not::ENV;
 
-our $VERSION = '0.001000';
+our $VERSION = '0.001001';
 
 # ABSTRACT: Load a plugin when an ENV key is NOT true.
 
@@ -44,7 +44,7 @@ Dist::Zilla::Plugin::if::not::ENV - Load a plugin when an ENV key is NOT true.
 
 =head1 VERSION
 
-version 0.001000
+version 0.001001
 
 =head1 SYNOPSIS
 

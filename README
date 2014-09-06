@@ -2,7 +2,7 @@ NAME
     Dist::Zilla::Plugin::if::ENV - Load a plugin when an ENV key is true.
 
 VERSION
-    version 0.001000
+    version 0.001001
 
 SYNOPSIS
       [if::ENV]

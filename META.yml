@@ -33,6 +33,10 @@ requires:
   strict: '0'
   utf8: '0'
   warnings: '0'
+resources:
+  bugtracker: https://github.com/kentnl/Dist-Zilla-Plugin-if-ENV/issues
+  homepage: https://github.com/kentnl/Dist-Zilla-Plugin-if-ENV
+  repository: https://github.com/kentnl/Dist-Zilla-Plugin-if-ENV.git
 version: '0.001000'
 x_BuiltWith:
   modules:

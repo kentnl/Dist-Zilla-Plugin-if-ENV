@@ -118,6 +118,17 @@
       }
    },
    "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/kentnl/Dist-Zilla-Plugin-if-ENV/issues"
+      },
+      "homepage" : "https://github.com/kentnl/Dist-Zilla-Plugin-if-ENV",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/kentnl/Dist-Zilla-Plugin-if-ENV.git",
+         "web" : "https://github.com/kentnl/Dist-Zilla-Plugin-if-ENV"
+      }
+   },
    "version" : "0.001000",
    "x_BuiltWith" : {
       "modules" : {

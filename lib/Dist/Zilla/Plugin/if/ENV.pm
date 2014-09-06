@@ -67,12 +67,18 @@ Then
 =over 4
 
 =item * C<[if]> - L<< Dist::Zilla::Plugin::if|Dist::Zilla::Plugin::if >>
+
 =item * C<[if::not]> - L<< Dist::Zilla::Plugin::if::not|Dist::Zilla::Plugin::if::not >>
+
 =item * C<[if::not::ENV]> - L<< Dist::Zilla::Plugin::if::not::ENV|Dist::Zilla::Plugin::if::not::ENV >>
+
 =item * C<PluginLoader::Configurable role> - L<<
 Dist::Zilla::Role::PluginLoader::Configurable|Dist::Zilla::Role::PluginLoader::Configurable
 >>
+
 =item * C<PluginLoader role> - L<< Dist::Zilla::Role::PluginLoader|Dist::Zilla::Role::PluginLoader >>
+
+=item * C<PluginLoader util> - L<< Dist::Zilla::Util::PluginLoader|Dist::Zilla::Util::PluginLoader >>
 
 =back
 

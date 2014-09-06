@@ -3,11 +3,11 @@ use strict;
 use warnings;
 use utf8;
 
-package Dist::Zilla::Plugin::if::ENV;
+package Dist::Zilla::Plugin::if::not::ENV;
 
 our $VERSION = '0.001000';
 
-# ABSTRACT: Load a plugin when an ENV key is true.
+# ABSTRACT: Load a plugin when an ENV key is NOT true.
 
 # AUTHORITY
 
@@ -23,8 +23,7 @@ around dump_config => config_dumper( __PACKAGE__, qw( key ) );
 around load_plugins => sub {
   my ( $orig, $self, $loader ) = @_;
   my $key = $self->key;
-  return unless exists $ENV{$key};
-  return unless $ENV{$key};
+  return if exists $ENV{$key} and $ENV{$key};
   return $self->$orig($loader);
 };
 
@@ -35,18 +34,18 @@ no Moose;
 
 =head1 SYNOPSIS
 
-  [if::ENV]
-  key            = UBERTESTING
+  [if::not::ENV]
+  key            = AIRPLANE
   dz_plugin      = Some::Plugin
-  dz_plugin_name = UBERTEST/Some::Plugin
+  dz_plugin_name = NOTAIRPLANE/Some::Plugin
   >= some_plugin_argument = itsvalue
   >= some_plugin_argument = itsvalue
 
 Then
 
-  dzil build # Some::Plugin not loaded, but declared as a develop dep anyway
-  UBERTESTING=1 dzil build # Some::Plugin loaded!
-  UBERTESTING=0 dzil build # Some::Plugin NOT loaded
+  dzil build # Some::Plugin is loaded
+  AIRPLANE=1 dzil build # Some::Plugin NOT loaded!... but still a develop dep.
+  AIRPLANE=0 dzil build # Some::Plugin loaded
 
 =head2 SEE ALSO
 
@@ -56,7 +55,7 @@ Then
 
 =item * C<[if::not]> - L<< Dist::Zilla::Plugin::if::not|Dist::Zilla::Plugin::if::not >>
 
-=item * C<[if::not::ENV]> - L<< Dist::Zilla::Plugin::if::not::ENV|Dist::Zilla::Plugin::if::not::ENV >>
+=item * C<[if::ENV]> - L<< Dist::Zilla::Plugin::if::ENV|Dist::Zilla::Plugin::if::ENV >>
 
 =item * C<PluginLoader::Configurable role> - L<<
 Dist::Zilla::Role::PluginLoader::Configurable|Dist::Zilla::Role::PluginLoader::Configurable

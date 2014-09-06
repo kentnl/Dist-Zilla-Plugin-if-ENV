@@ -4,6 +4,28 @@ NAME
 VERSION
     version 0.001000
 
+SYNOPSIS
+      [if::ENV]
+      key            = UBERTESTING
+      dz_plugin      = Some::Plugin
+      dz_plugin_name = UBERTEST/Some::Plugin
+      >= some_plugin_argument = itsvalue
+      >= some_plugin_argument = itsvalue
+
+    Then
+
+      dzil build # Some::Plugin not loaded, but declared as a develop dep anyway
+      UBERTESTING=1 dzil build # Some::Plugin loaded!
+      UBERTESTING=0 dzil build # Some::Plugin NOT loaded
+
+  SEE ALSO
+    *   "[if]" - Dist::Zilla::Plugin::if =item * "[if::not]" -
+        Dist::Zilla::Plugin::if::not =item * "[if::not::ENV]" -
+        Dist::Zilla::Plugin::if::not::ENV =item *
+        "PluginLoader::Configurable role" -
+        Dist::Zilla::Role::PluginLoader::Configurable =item * "PluginLoader
+        role" - Dist::Zilla::Role::PluginLoader
+
 AUTHOR
     Kent Fredric <kentnl@cpan.org>
 

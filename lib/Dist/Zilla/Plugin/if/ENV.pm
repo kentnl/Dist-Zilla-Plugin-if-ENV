@@ -47,6 +47,35 @@ Dist::Zilla::Plugin::if::ENV - Load a plugin when an ENV key is true.
 
 version 0.001000
 
+=head1 SYNOPSIS
+
+  [if::ENV]
+  key            = UBERTESTING
+  dz_plugin      = Some::Plugin
+  dz_plugin_name = UBERTEST/Some::Plugin
+  >= some_plugin_argument = itsvalue
+  >= some_plugin_argument = itsvalue
+
+Then
+
+  dzil build # Some::Plugin not loaded, but declared as a develop dep anyway
+  UBERTESTING=1 dzil build # Some::Plugin loaded!
+  UBERTESTING=0 dzil build # Some::Plugin NOT loaded
+
+=head2 SEE ALSO
+
+=over 4
+
+=item * C<[if]> - L<< Dist::Zilla::Plugin::if|Dist::Zilla::Plugin::if >>
+=item * C<[if::not]> - L<< Dist::Zilla::Plugin::if::not|Dist::Zilla::Plugin::if::not >>
+=item * C<[if::not::ENV]> - L<< Dist::Zilla::Plugin::if::not::ENV|Dist::Zilla::Plugin::if::not::ENV >>
+=item * C<PluginLoader::Configurable role> - L<<
+Dist::Zilla::Role::PluginLoader::Configurable|Dist::Zilla::Role::PluginLoader::Configurable 
+>>
+=item * C<PluginLoader role> - L<< Dist::Zilla::Role::PluginLoader|Dist::Zilla::Role::PluginLoader >>
+
+=back
+
 =head1 AUTHOR
 
 Kent Fredric <kentnl@cpan.org>

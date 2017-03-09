@@ -21,10 +21,10 @@ name: Dist-Zilla-Plugin-if-ENV
 provides:
   Dist::Zilla::Plugin::if::ENV:
     file: lib/Dist/Zilla/Plugin/if/ENV.pm
-    version: '0.001001'
+    version: '0.001002'
   Dist::Zilla::Plugin::if::not::ENV:
     file: lib/Dist/Zilla/Plugin/if/not/ENV.pm
-    version: '0.001001'
+    version: '0.001002'
 recommends:
   Moose: '2.000'
 requires:
@@ -38,4 +38,4 @@ resources:
   bugtracker: https://github.com/kentnl/Dist-Zilla-Plugin-if-ENV/issues
   homepage: https://github.com/kentnl/Dist-Zilla-Plugin-if-ENV
   repository: https://github.com/kentnl/Dist-Zilla-Plugin-if-ENV.git
-version: '0.001001'
+version: '0.001002'

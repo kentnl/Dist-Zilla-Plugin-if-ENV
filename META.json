@@ -125,11 +125,11 @@
    "provides" : {
       "Dist::Zilla::Plugin::if::ENV" : {
          "file" : "lib/Dist/Zilla/Plugin/if/ENV.pm",
-         "version" : "0.001001"
+         "version" : "0.001002"
       },
       "Dist::Zilla::Plugin::if::not::ENV" : {
          "file" : "lib/Dist/Zilla/Plugin/if/not/ENV.pm",
-         "version" : "0.001001"
+         "version" : "0.001002"
       }
    },
    "release_status" : "stable",
@@ -144,7 +144,7 @@
          "web" : "https://github.com/kentnl/Dist-Zilla-Plugin-if-ENV"
       }
    },
-   "version" : "0.001001",
+   "version" : "0.001002",
    "x_BuiltWith" : {
       "external_file" : "misc/built_with.json"
    },
@@ -649,7 +649,7 @@
                   "branch" : null,
                   "changelog" : "Changes",
                   "signed" : 0,
-                  "tag" : "0.001001-source",
+                  "tag" : "0.001002-source",
                   "tag_format" : "%v-source",
                   "tag_message" : "v%v"
                },
@@ -743,7 +743,7 @@
                   "branch" : "releases",
                   "changelog" : "Changes",
                   "signed" : 0,
-                  "tag" : "0.001001",
+                  "tag" : "0.001002",
                   "tag_format" : "%v",
                   "tag_message" : "v%v"
                },

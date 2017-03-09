@@ -4,7 +4,7 @@ use warnings;
 
 package Dist::Zilla::Plugin::if::not::ENV;
 
-our $VERSION = '0.001001';
+our $VERSION = '0.001002';
 
 # ABSTRACT: Load a plugin when an ENV key is NOT true.
 

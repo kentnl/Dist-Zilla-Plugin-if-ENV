@@ -1,6 +1,8 @@
 Release history for Dist-Zilla-Plugin-if-ENV
 
 {{$NEXT}}
+
+0.001001 2017-03-09T07:52:40Z 71060a2
  - Bugfix: Avoid test failures with -Ddefault_inc_excludes_dot
  - Remove use of ConfigDumper util
  - Remove Test::KENTNL/dztest from tests

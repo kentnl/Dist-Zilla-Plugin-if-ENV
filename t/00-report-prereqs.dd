@@ -86,7 +86,6 @@ do { my $x = {
                       'requires' => {
                                       'Dist::Zilla::Role::PluginLoader::Configurable' => '0',
                                       'Dist::Zilla::Util' => '0',
-                                      'Dist::Zilla::Util::ConfigDumper' => '0',
                                       'Moose' => '0',
                                       'perl' => '5.006',
                                       'strict' => '0',

@@ -1,7 +1,14 @@
 Release history for Dist-Zilla-Plugin-if-ENV
 
 {{$NEXT}}
+ - Bugfix: Avoid test failures with -Ddefault_inc_excludes_dot
+
+ [Dependencies::Stats]
+ - Dependencies changed since 0.001000, see misc/*.deps* for details
+ - configure: +1 (recommends: ↑1)
+ - develop: +13 ↑4 -3 (recommends: +1, suggests: ↑2)
+ - runtime: (recommends: +1)
+ - test: +1 (recommends: ↑1 ↓1)
 
 0.001000 2014-09-06T02:39:34Z
  - First version.
-

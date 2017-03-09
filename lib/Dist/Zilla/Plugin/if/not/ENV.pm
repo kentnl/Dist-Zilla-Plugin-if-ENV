@@ -1,11 +1,10 @@
-use 5.008;    # utf8
+use 5.006;    # our
 use strict;
 use warnings;
-use utf8;
 
 package Dist::Zilla::Plugin::if::not::ENV;
 
-our $VERSION = '0.001000';
+our $VERSION = '0.001001';
 
 # ABSTRACT: Load a plugin when an ENV key is NOT true.
 
@@ -13,12 +12,22 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 use Moose qw( has around with );
 use Dist::Zilla::Util qw();
-use Dist::Zilla::Util::ConfigDumper qw( config_dumper );
-
 with 'Dist::Zilla::Role::PluginLoader::Configurable';
 
 has key => ( is => ro =>, required => 1 );
-around dump_config => config_dumper( __PACKAGE__, qw( key ) );
+
+around dump_config => sub {
+  my ( $orig, $self, @args ) = @_;
+  my $config = $self->$orig(@args);
+  my $localconf = $config->{ +__PACKAGE__ } = {};
+
+  $localconf->{key} = $self->key;
+
+  $localconf->{ q[$] . __PACKAGE__ . '::VERSION' } = $VERSION
+    unless __PACKAGE__ eq ref $self;
+
+  return $config;
+};
 
 around load_plugins => sub {
   my ( $orig, $self, $loader ) = @_;
@@ -44,7 +53,7 @@ Dist::Zilla::Plugin::if::not::ENV - Load a plugin when an ENV key is NOT true.
 
 =head1 VERSION
 
-version 0.001000
+version 0.001001
 
 =head1 SYNOPSIS
 
@@ -87,7 +96,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2014 by Kent Fredric <kentfredric@gmail.com>.
+This software is copyright (c) 2017 by Kent Fredric <kentfredric@gmail.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

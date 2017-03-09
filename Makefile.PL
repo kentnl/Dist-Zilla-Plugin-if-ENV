@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use 5.008;
+use 5.006;
 
 use ExtUtils::MakeMaker;
 
@@ -14,7 +14,7 @@ my %WriteMakefileArgs = (
   },
   "DISTNAME" => "Dist-Zilla-Plugin-if-ENV",
   "LICENSE" => "perl",
-  "MIN_PERL_VERSION" => "5.008",
+  "MIN_PERL_VERSION" => "5.006",
   "NAME" => "Dist::Zilla::Plugin::if::ENV",
   "PREREQ_PM" => {
     "Dist::Zilla::Role::PluginLoader::Configurable" => 0,
@@ -22,7 +22,6 @@ my %WriteMakefileArgs = (
     "Dist::Zilla::Util::ConfigDumper" => 0,
     "Moose" => 0,
     "strict" => 0,
-    "utf8" => 0,
     "warnings" => 0
   },
   "TEST_REQUIRES" => {
@@ -50,7 +49,6 @@ my %FallbackPrereqs = (
   "Test::DZil" => 0,
   "Test::More" => "0.96",
   "strict" => 0,
-  "utf8" => 0,
   "warnings" => 0
 );
 
